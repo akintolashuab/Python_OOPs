@@ -1,0 +1,11 @@
+Hello World
+Appending additional content
+Appending more additional content
+with open("c://Users//USER//Documents//Python_works//groceries.csv", 'r') as temp_f:
+    item_count_row = [ len(i.split(",")) for i in temp_f.readlines() ]
+    
+# Generate column names  (names will be 0, 1, 2, ..., maximum columns - 1)
+column_header = [i for i in range(0, max(item_count_row))]
+
+# Read csv
+df = pd.read_csv("groceries.csv", header=None, sep=",", names=column_header)
