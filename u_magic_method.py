@@ -32,6 +32,9 @@ class Car:
             return f'The difference in the cost of {self.make} car and {other.make} car is: \n{round(cost,2)}'
         else:
             return NotImplemented
+        
+    def __len__ (self):
+        return len(self.make + self.model)
 car1 = Car('Red', 'Chevrolet', 'Camaro', 2023, 75800.50)
 car2 = Car('Black', 'Bugatti', 'Cheyron', 2023, 88580.95)
 car3 = Car('Black', 'Chevrolet', 'Camaro', 2023, 77900.88)
@@ -42,3 +45,5 @@ print(car1==car3)
 print(car2==car3)
 print(car1 + car2)
 print(car3-car1)
+print(len(car2))
+print(car3, car2, sep ="\n")

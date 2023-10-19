@@ -8,10 +8,10 @@ class Date:
         self.day = day
     
     @classmethod
-    def from_string(cls, date_string, sep = '-'):
+    def from_string(cls, date_string, diff = '-'):
         ''' This take any input of date format and return normal date 
     '''
-        year, month, day = map(int, date_string.split(sep))
+        year, month, day = map(int, date_string.split(diff))
         return cls(year, month, day)
     
     @staticmethod
@@ -28,7 +28,7 @@ class Date:
     
 
 #inst_1 = Date(2023, 12, 35)
-inst_1 = Date.from_string('2023$12$35', '$')
-print(inst_1.day)
+inst_1 = Date.from_string('2018$08$01', '$')
+print(inst_1.year)
 inst_2 = Date.power(2,3)
 print(inst_2)
