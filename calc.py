@@ -24,7 +24,5 @@ def division(a:int,b:int)-> int:
     if b == 0:
         return ValueError ('Cannot divide by Zero')
     else:
-        return int(a/b)
+        return a/b
 
-
-print(division(4,2))
