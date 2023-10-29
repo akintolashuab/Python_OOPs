@@ -22,7 +22,7 @@ def division(a:int,b:int)-> int:
     '''Returns the sum of two number
     '''
     if b == 0:
-        return ValueError ('Cannot divide by Zero')
+        raise ValueError ('Cannot divide by Zero')
     else:
         return a/b
 
