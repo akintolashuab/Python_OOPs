@@ -28,7 +28,7 @@ class TestCalc(unittest.TestCase):
         self.assertEqual((calc.division(20,4)), 5)
         
         with self.assertRaises(ValueError):
-            calc.division(10,2)
+            calc.division(10,0)
     
         
 if __name__ == '__main__':

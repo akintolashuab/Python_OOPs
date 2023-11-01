@@ -38,6 +38,7 @@ class TestEmployee(unittest.TestCase):
         
         self.assertEqual(emp_1.pay, 52000)
         self.assertEqual(emp_2.pay, 104000)
+        
 if __name__ == '__main__':
     unittest.main()
         
