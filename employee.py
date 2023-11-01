@@ -1,3 +1,4 @@
+import requests
 class Employee:
     raise_amount = 1.04
     
@@ -18,4 +19,9 @@ class Employee:
         self.pay *= self.raise_amount
         return self.pay
     
-    
+    def monthly_schedule(self, month):
+        response = requests.get(f"http://company.com/{self.last}/{month}")
+        if response.ok:
+            return response.txt
+        else:
+            return 'Opps!! Bad Response!'
